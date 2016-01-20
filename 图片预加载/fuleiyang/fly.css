@@ -1,0 +1,267 @@
+@charset "utf-8";
+* {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	outline: 0;
+	font-size: 12px;
+	overflow: hidden;
+	font-family: "黑体";
+	-webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+}
+.auto{
+	overflow-y: auto;
+}
+html,
+body {
+	width: 100%;
+	height: 100%;
+	-webkit-text-size-adjust: 100%;
+	text-size-adjust: 100%;
+	-webkit-tap-highlight-color: rgba(255, 0, 0, 0);
+	background: #FFFFFF;
+}
+.hide {
+	display: none!important;
+}
+body {
+	font-size: 1em;
+	font-family: Verdana;
+}
+section {
+	width: 100%;
+	height: 100%;
+}
+ul,
+li {
+	list-style: none;
+}
+img {
+	border: none;
+}
+em {
+	font-style: normal;
+}
+a {
+	color: #444;
+	text-decoration: none;
+}
+
+header{
+	width: 100%;
+	height: 50px;
+	position: absolute;
+	z-index: 100;
+	left: 0px;
+	top: 0px;
+	background-color: #FF494B;
+	box-shadow: 2px 2px 5px hsla(0, 0%, 27%, 0.5);
+}
+header>.left{
+	position: absolute;
+	width: 40px;
+	height: 50px;
+	float: left;
+	left: 0px;
+	
+}
+header>.center{
+	position: absolute;
+	left: 50px;
+	right: 50px;
+	text-align: center;
+	line-height: 50px;
+	color: white;
+	height: 50px;
+	float: left;
+	font-size: 1.5em;
+}
+header>.right{
+	position: absolute;
+	width: 40px;
+	height: 50px;
+	float: right;
+	right: 0px;
+	color: white;
+	z-index: 102;
+	font-size: 1.2em;
+	text-align: center;
+	line-height: 50px;
+}
+
+.ovauto{
+	overflow-x: hidden;
+	overflow-y: auto;
+}
+.article{
+	position: absolute;
+	width: 100%;
+}
+.art_top0{
+	top: 0px;
+}
+.art_top50{
+	top: 50px;
+}
+.art_top90{
+	top: 90px;
+}
+.art_top100{
+	top: 100px;
+}
+.art_bottom0{
+	bottom: 0px;
+}
+.art_bottom50{
+	bottom: 50px;
+}
+.art_bottom90{
+	bottom: 90px;
+}
+.art_bottom100{
+	bottom: 100px;
+}
+
+.bighide{
+	width: 100%;
+	position: absolute;
+	top:0px;
+	left: 0px;
+	bottom: 0px;
+	z-index: 120;
+}
+.bighide>.blackhide{
+	width: 100%;
+	height: 100%;
+	background-color: black;
+	opacity: 0.5;
+}
+
+.showmsg {
+  position: absolute;
+  width: 100%;
+  bottom: 15%;
+  height: 40px;
+  display: none;
+  z-index: 1015;
+  text-align: center;
+}
+.showmsg>span {
+  color: #ffffff;
+  line-height: 40px;
+  font-size: 15px;
+  padding: 10px 15px;
+  border-radius: 5px;
+  background-color: #918585;
+    font-family: -webkit-body;
+}
+
+*下拉刷新*/
+/*上拉加载*/
+
+#pullDown {
+	height: 40px;
+	line-height: 40px;
+	padding: 0 10px;
+	margin-top: 5px;
+	font-weight: bold;
+	font-size: 14px;
+	color: #888;
+	display: none;
+	visibility: visible;
+	/*text-align:center;*/
+}
+#pullUp {
+	/*  background: rgba(255, 255, 255, 0.5); */
+	
+	height: 40px;
+	line-height: 40px;
+	padding: 0 10px;
+	margin-top: 5px;
+	/*    border-bottom: 1px solid #ccc; */
+	
+	font-weight: bold;
+	font-size: 14px;
+	color: #888;
+	visibility: visible;
+	/*display:none;*/
+}
+#pullDown .pullDownIcon,
+#pullUp .pullUpIcon {
+	display: block;
+	float: left;
+	width: 40px;
+	height: 40px;
+	background: url(./img/pull-icon@2x.png) 0 0 no-repeat;
+	background-size: 40px 80px;
+	-webkit-transition-property: -webkit-transform;
+	-webkit-transition-duration: 250ms;
+}
+#pullDown .pullDownIcon {
+	-webkit-transform: rotate(0deg) translateZ(0);
+	margin-left: 30%;
+}
+#pullUp .pullUpIcon {
+	-webkit-transform: rotate(-180deg) translateZ(0);
+}
+#pullDown.flip .pullDownIcon {
+	-webkit-transform: rotate(-180deg) translateZ(0);
+}
+#pullUp.flip .pullUpIcon {
+	-webkit-transform: rotate(0deg) translateZ(0);
+}
+#pullDown.loading .pullDownIcon,
+#pullUp.loading .pullUpIcon {
+	background-position: 0 100%;
+	-webkit-transform: rotate(0deg) translateZ(0);
+	-webkit-transition-duration: 0ms;
+	-webkit-animation-name: loading;
+	-webkit-animation-duration: 2s;
+	-webkit-animation-iteration-count: infinite;
+	-webkit-animation-timing-function: linear;
+}
+@-webkit-keyframes loading {
+	from {
+		-webkit-transform: rotate(0deg) translateZ(0);
+	}
+	to {
+		-webkit-transform: rotate(360deg) translateZ(0);
+	}
+}
+
+.lst{
+	width:100%;
+	margin: 0 auto;
+	
+}
+.lst>li{
+	width:41%;
+	float:left;
+	border: 1px solid #ccc;
+	margin: 4%;
+}
+.lst>li>div{
+	width:100%;
+	height:120px;
+	display: table;
+	
+	
+}
+.lst>li>div>span{
+	display: table-cell;
+	width:100%;
+	height:100%;
+	vertical-align: middle;
+	text-align: center;
+}
+.lst>li>div>span>img{
+	max-height: 100%;
+	max-width: 100%;
+}
+.lst>li>span{
+	display: block;
+	line-height: 30px;
+	text-align: center;
+	margin: 10px auto;
+	font-size: 1.2em;
+}

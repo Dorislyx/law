@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<meta name="trimview" content="1.0.0">
+		<meta charset="utf-8" />
+		<title>图片预加载</title>
+		<link rel="stylesheet" type="text/css" href="./fly.css"/>
+	</head>
+	<body>
+		<section>
+			<header class="orderdetails_header">
+				<span class="left" id="back"></span>
+				<span class="center">图片预加载</span>
+				<span class="right"></span>
+			</header>
+			<article class="article art_top50 art_bottom0 orderdetails_article" id="mycart" style="overflow: auto;">				
+					<div>
+						<div id="pullDown" class="" style="visibility: visible; display: none;">
+							<span class="pullDownIcon"></span>
+							<span class="pullDownLabel">下拉刷新...</span>
+						</div>
+						<ul class="lst"></ul>
+					</div>
+			</article>
+			 <script src="./js/jquery-2.1.4.min.js"></script>
+			<script src="./js/iscroll.js"></script>
+		</section>
+		
+		<script type="text/javascript">
+		var htm='';
+			//模拟数据库数据
+			var datalst=[
+					{'name':'海飞丝','url':'http://eyexiangle.com/fuleiyang/img/dome1.png'},
+					{'name':'潘婷洗发露','url':'http://eyexiangle.com/fuleiyang/img/dome2.png'},
+					{'name':'海尔电视机','url':'http://eyexiangle.com/fuleiyang/img/dome3.png'},
+					{'name':'飞科剃须刀','url':'http://eyexiangle.com/fuleiyang/img/dome2.png'},
+					{'name':'海绵宝宝','url':'http://eyexiangle.com/fuleiyang/img/dome2.png'},
+					{'name':'光头强','url':'http://eyexiangle.com/fuleiyang/img/dome2.png'},
+					{'name':'爱你一万年','url':'http://eyexiangle.com/fuleiyang/img/dome1.png'},
+					{'name':'飞到天上去','url':'http://eyexiangle.com/fuleiyang/img/dome2.png'},
+					{'name':'寻龙诀','url':'http://eyexiangle.com/fuleiyang/img/dome3.png'},
+					{'name':'云南白药','url':'http://eyexiangle.com/fuleiyang/img/dome2.png'},
+					{'name':'海绵宝宝','url':'http://eyexiangle.com/fuleiyang/img/dome1.png'},
+					{'name':'光头强','url':'http://eyexiangle.com/fuleiyang/img/dome2.png'},
+					{'name':'爱你一万年','url':'http://eyexiangle.com/fuleiyang/img/dome3.png'},
+					{'name':'飞到天上去','url':'http://eyexiangle.com/fuleiyang/img/dome2.png'},
+					{'name':'寻龙诀','url':'http://eyexiangle.com/fuleiyang/img/dome2.png'},
+					{'name':'云南白药','url':'http://eyexiangle.com/fuleiyang/img/dome3.png'}
+			];
+			function getindex(){
+				 htm='';
+				$(datalst).each(function(k,v){
+						htm+='<li>';
+						htm+='<div><span><img src="./img/img_bg.png" _src="'+v['url']+'" alt="" /></span></div>';
+						htm+='<span>'+v['name']+'</span>';
+						htm+='</li>';
+				});
+				$('.lst').empty().append(htm);
+				loadImg();
+			}
+		
+		
+			//判断是否加载图片
+	function loadImg(){
+		var _height=$(window).height();
+		var imgs=$('img');
+		$(imgs).each(function(k,v){
+			var _top=$(v).offset().top;
+			//console.log(_top);
+			if(_top>0&&_top<_height){
+				LoadingImg(v);
+			}
+		});
+	}
+	
+	//加载图片
+	function LoadingImg(obj){
+		var imgUrl=$(obj).attr('_src');
+		//console.log(imgUrl);
+		var img=new Image();
+		img.src=imgUrl;
+		img.onload=function(event){
+			$(obj).attr('src',img.src);
+			if(event.complete){
+				$(obj).attr('src',img.src);
+			}
+		}
+	}
+	
+	
+
+
+
+
+	var IstotalPage = false;
+	var myScroll,
+		pullDownEl, pullDownOffset,
+		pullUpEl, pullUpOffset,
+		generatedCount = 0;
+	/**
+	 * 初始化iScroll控件
+	 */
+	function loaded() {
+		$(pullDownEl).css('visibility', 'visible');
+		pullDownEl = document.getElementById('pullDown');
+		pullDownOffset = pullDownEl.offsetHeight;
+		myScroll = new iScroll('mycart', {
+			useTransition: true,
+			vScrollbar: false,
+			topOffset: pullDownOffset,
+			onRefresh: function() {
+				if (pullDownEl.className.match('loading')) {
+					$(pullDownEl).css('display', 'block');
+					pullDownEl.className = '';
+					pullDownEl.querySelector('.pullDownLabel').innerHTML = '下拉刷新...';
+				}
+			},
+			onScrollMove: function(event) {
+				loadImg();
+				event.stopPropagation();
+				if (this.y > 5 && !pullDownEl.className.match('flip')) {
+					$(pullDownEl).css('display', 'block');
+					pullDownEl.className = 'flip';
+					pullDownEl.querySelector('.pullDownLabel').innerHTML = '松手开始更新...';
+					this.minScrollY = 0;
+				} else if (this.y < 5 && pullDownEl.className.match('flip')) {
+					$(pullDownEl).css('display', 'block');
+					pullDownEl.className = '';
+					pullDownEl.querySelector('.pullDownLabel').innerHTML = '下拉刷新...';
+					this.minScrollY = -pullDownOffset;
+				}
+			},
+			onScrollEnd: function() {
+				loadImg();
+				if (pullDownEl.className.match('flip')) {
+					pullDownEl.className = 'loading';
+					pullDownEl.querySelector('.pullDownLabel').innerHTML = '更新中...';
+					isload = true;
+					getindex(); // Execute custom function (ajax call?)
+					setTimeout(function() {
+						myScroll.refresh();
+						$(pullDownEl).css('display', 'none');
+					}, 2000);
+				}
+			}
+		});
+	}
+	
+	function reScroll() {
+		if (bInitScorll === 0) {
+			loadScroll = setTimeout(function() {
+				loaded();
+			}, 300)
+		} else {
+			loadScrollRefresh = setTimeout(function() {
+				myScroll.refresh();
+			}, 300);
+		}
+	}
+	function start(){
+		bInitScorll = 0;
+		reScroll();//执行reScroll();之前必须对 bInitScorll = 0;进行初始化
+		getindex();
+		
+	}
+		start();
+		
+		</script>
+	</body>
+</html>
