@@ -1,0 +1,262 @@
+1、字体属性(type)
+font-family(使用什么字体)
+font-style(字体的样式，是否斜体)：normal/italic/oblique
+font-variant(字体大小写)：normal/small-caps
+font-weight(字体的粗细)：normal/bold/bolder/lithter
+font-size(字体的大小)：absolute-size/relative-size/length/percentage
+
+2、颜色和背景属性(backgroud)
+color(定义前景色，例如：p{color:red})
+background-color(定义背景色)
+background-image(定义背景图片)
+background-repeat(背景图案重复方式)：repeat-x/repeat-y/no-repeat
+background-attachment(设置滚动)：scroll(滚动)/fixe(固定的)
+background-position(背景图案的初始位置)：percentage/length/top/left/right/bottom
+
+3、文本属性：(block)
+定义间距：
+word-spacing(单词之间的距离)
+letter-spacing(字母之间的距离)
+text-decoration(定义文字的装饰)：nore/underline/overline/line-through/blink
+vertical-align(元素在垂直方向的位置)：baseline(基线)/sub/super/top/text-top/middle/bottom/text-bottom
+text-transform(使文本转换为其它方式)：capitalize(大写)/uppercase(首字母大写)/lowercase(小写)/none
+text-align(文字的对齐)：left/right/center/justify
+text-indent(文本的首行缩进)length/percentage
+line-height(文本的行高):normal/numbet/lenggth/percentage(百分比)
+
+定义超链接：
+a：link {color:green;text-decoration:nore}(未访问过的状态)
+a：visited {color:ren;text-decoration:underline;16pt}(访问过的状态)
+a:hover {color:blue;text-decoration:underline;16pt}(鼠标激活的状态)
+
+4、块属性(block)
+边距属性：
+margin-top(设置顶边距)
+margin-right(设置右边距)
+margin-bottom(设置底边距)
+margin-left(设置左边距)
+填充距属性：
+padding-top设置顶端真充距)
+padding-right设置顶端真充距)
+padding-bottom设置顶端真充距)
+padding-left设置顶端真充距)
+
+5、边框属性(border)
+border-top-width(顶端边框宽度)
+border-right-width(右端边框宽度)
+border-bottom-width(底端边框宽度)
+border-left-width(d左边框宽度)
+border-width(一次定义边框宽度)
+border-color(设置边框颜色)
+border-style(设置边框样式)
+border-top(一次定义顶端各种属性)
+border-right(一次定义右端各种属性)
+border-bottom(一次定义底端各种属性)
+border-left(一次定义左端各种属性)
+图文混排：
+width(定义宽度属性)
+height(定义高度属性)
+float(文字环绕在一个元素的四周)
+clear(定义某一边是否有环绕)
+
+6、项目符号和编号(list)
+display(定义是否显示)
+white-space(怎样处理空白部分)：normal/pre/nowrap
+list-style-type(在列表前加项目符号)disc(圆点)/circle(圈)/square（方形）
+
+/decimal（阿拉伯数字）/lower-roman(小写罗马数字)/upper-roman(大写罗马数字)/lower-alpha(小写英文字母)/upper-alpha(大写英文字母)/nore
+list-style-tyle(在列表前加图案):<url>/none
+list-style-position(决定列表项中第二行的起邕位置)
+list-style(一次性定义所有属性)
+
+7、定位（positioning） 即层属性
+Type：设定对象的定位方式。
+有三种方式：Absolute（绝对定位）、Relative（相对定位）、Static（无特殊定位）。相对应的CSS属性是”position”。
+
+Visibility：设定对象定位层的最初显示状态。有三种状态：Inherit（继承父层的显示属性）、Visible（对象可视）、Hidden隐藏对象。相对应的CSS属性是”
+
+visibility”。
+
+Z-Index：设置对象的层叠顺序。编号较大的层会显示在编号较小的层上边。变量
+
+值可以是正值也可以是负值。相对应的CSS属性是”z-index”。
+
+Overflow：设置如果层的内容超出了层的大小时如何处理。有四种处理方式：
+
+visible，增加层的大小，从而将层的所有内容显示出来；hidden，保持层的大小
+
+不变，将超出层的内容剪裁掉；Scroll，总是显示滚动条；Auto，只有在内容超出
+
+层的边界时才显示滚动条。相对应的CSS属性是”overflow”。
+
+Placement：设置对象定位层的位置和大小。可以分别设置left（左边定位）、top
+
+（顶部定位）、width（宽）、height（高）。相对应的CSS属性分别是”left;
+
+top; width; height”。
+
+Clip：定义定位层的可视区域。区域外的部分为不可视区，为透明的。可以理解为
+
+在定位层上放一个矩形遮罩的效果。相对应的CSS属性是”clip”。
+
+
+8、扩展（Extensions） 
+Pagebreak：在打印的时候强迫在样式控制的对象前后换页。
+
+Before：设置对象前出现的页分割符。设置为always时，始终在对象之前插入页分
+
+割符。相对应的CSS属性是”page-break-before”。
+
+After：设置对象后出现的页分割符。设置为always时，始终在对象之后插入页分
+
+割符。相对应的CSS属性是”'>。
+
+注意：以上IE5仅支持always值和空白值（null）。
+
+Cursor：当鼠标滑过样式控制的对象时改变鼠标形状。可以设置为hand（手型）、
+
+crosshair（“十”型）、text （“I”型）、wait（等待）、default（默认）、
+
+help（帮助）、e-resize（东箭头）、ne-resize（东北箭头）、n-resize（北箭
+
+头）、nw-resize（西北箭头）、w-resize（西箭头）、sw-resize（西南箭头）、
+
+s-resize（南箭头）、se-resize（东南箭头）和auto（自动）。
+
+Filter：在样式中加上滤镜特效。由于此属性内容比较多，我们将到下一章单独对
+
+滤镜介绍。
+
+1.　　　　Alpha：设置透明度
+
+Alpha(Opacity=?, FinishOpacity=?, Style=?, StartX=?, StartY=?,
+
+FinishX=?, FinishY=?)
+
+Opacity：透明度级别，范围是0-100，0代表完全透明，100代表完全不透明。
+
+FinishOpacity：设置渐变的透明效果时，用来指定结束时的透明度，范围也是0
+
+到 100。
+
+Style：设置渐变透明的样式，值为0代表统一形状、1代表线形、2代表放射状、3
+
+代表长方形。
+
+StartX和StartY：代表渐变透明效果的开始X和Y坐标。
+
+FinishX和FinishY：代表渐变透明效果结束X和Y 的坐标。
+
+2.　　　　BlendTrans：图像之间的淡入和淡出的效果
+
+BlendTrans(Duration=?)
+
+Duration：淡入或淡出的时间。
+
+注意：这个滤镜必须配合JS建立图片序列，才能做出图片间效果。
+
+3.　　　　Blru：建立模糊效果
+
+Blur(Add=?, Direction=?, Strength=?)
+
+Add：是否单方向模糊，此参数是一个布尔值，true（非0）或false（0）。
+
+Direction：设置模糊的方向，其中0度代表垂直向上，然后每45度为一个单位。
+
+Strength：代表模糊的象素值。
+
+4.　　　　Chroma：把指定的颜色设置为透明
+
+Chroma(Color=?)
+
+Color：是指要设置为透明的颜色。
+
+5.　　　　DropShadow：建立阴影效果
+
+DropShadow(Color=?, OffX=?, OffY=?, Positive=?)
+
+Color：指定阴影的颜色。
+
+OffX：指定阴影相对于元素在水平方向偏移量，整数。
+
+OffY：指定阴影相对于元素在垂直方向偏移量，整数。
+
+Positive：是一个布尔值，值为true（非0）时，表示为建立外阴影；为false(0)
+
+，表示为建立内阴影。
+
+6.　　　　FlipH：将元素水平反转
+
+7.　　　　FlipV：将元素垂直反转
+
+8.　　　　Glow：建立外发光效效果
+
+Glow(Color=?, Strength=?)
+
+Color：是指定发光的颜色。
+
+Strength：光的强度，可以是1到255之间的任何整数，数字越大，发光的范围就越
+
+大。
+
+9.　　　　Gray：去掉图像的色彩，显示为黑白图象
+
+10.　　Invert：反转图象的颜色，产生类似底片的效果
+
+11.　　Light：放置光源的效果，可以用来模拟光源在物体上的投影效果
+
+注意：此效果需要用JS设置光的位置和强度。
+
+12.　　Mask：建立透明遮罩
+
+Mask(Color=?)
+
+Color：设置底色，让对象遮住底色的部分透明。
+
+13.　　RevealTrans：建立切换效果
+
+RevealTrans(Duration=?, Transition=?)
+
+Duration：是切换时间，以秒为单位。
+
+Transtition：是切换方式，可设置为从0到23。
+
+注意：如果做页面间的切换效果，可以在<head>区加上一行代码：<Meta
+
+http-equiv=Page-enter content=revealTrans(Transition=?,Duration=?) >。如
+
+果用在页面里的元素必须配合JS使用。
+
+14.　　Shadow：建立另一种阴影效果
+
+Shadow(Color=?, Direction=?)
+
+Color：是指阴影的颜色。
+
+Direction：是设置投影的方向，0度代表垂直向上，然后每45度为一个单位。
+
+15.　　Wave：波纹效果
+
+Wave(Add=?, Freq=?, LightStrength=?, Phase=?, Strength=?)
+
+Add：表示是否显示原对象，0表示不显示，非0表示要显示原对象。
+
+Freq：设置波动的个数。
+
+LightStrength：设置波浪效果的光照强度，从0到100。0表示最弱，100表示最强
+
+。
+
+Phase：波浪的起始相角。从0到100的百分数值。（例如：25相当于90度，而50相
+
+当于180度。）
+
+Strength：设置波浪摇摆的幅度。
+
+16.　　Xray：显现图片的轮廓，X光片效果
+
+注意：在使用CSS滤镜时，必须使用在有区域的元素，比如表格，图片等。而文本
+
+，段落这样没有区域的元素不能使用CSS滤镜，对这样的元素我们可以设置元素的
+
+Height和Width样式或坐标来实现。 

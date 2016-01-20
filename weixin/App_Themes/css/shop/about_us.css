@@ -1,0 +1,30 @@
+
+@charset "utf-8";
+@import url("../public/public.css");
+.right>a{
+	display: block;
+	width:100%;
+	height:100%;
+	background-image: url(../../img/phone.png);
+	background-size: 40%;
+	background-position: center;
+	background-repeat: no-repeat;
+}
+.img{
+	width: 100%;
+	height: 120px;
+	background-image:url(../../img/ggwq.png);
+	background-size: 200px;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+.text{
+	width: 90%;
+	margin: 0 auto;
+	margin-bottom: 60px;
+}
+.text p{
+	line-height: 20px;
+	font-size: 1.2em;
+	margin-top: 15px;
+}

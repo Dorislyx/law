@@ -1,0 +1,114 @@
+
+@charset "utf-8";
+@import url("../public/public.css");
+/*.right{
+	background-image: url(../../img/more1.png);
+	background-size: 40%;
+	background-position: center;
+	background-repeat: no-repeat;
+}*/
+.text{
+	width: 90%;
+	margin: 12px auto;
+}
+.text span{
+	line-height: 30px;
+	font-size: 1.1em;
+}
+.text textarea{
+	width: 96%;
+	height: 150px;
+	border: 1px solid #eee;
+	padding: 5px;
+	resize: none;
+}
+.tip{
+	line-height: 30px;
+	font-size: 1.1em;
+	margin-left: 5%;
+}
+.photo_lst{
+	width: 90%;
+	margin: 0 auto;
+}
+.photo_lst li{
+	width: 22%;
+	height: 80px;
+	float: left;
+	margin-right:3%;
+}
+.photo_lst li img{
+	width: 100%;
+	height: 100%;
+	
+}
+
+
+
+
+
+
+.find_btn{
+	margin: 70px auto;
+	width:60%;
+	height:45px;
+	line-height: 45px;
+	text-align: center;
+	font-size: 1.7em;
+	color:#fff;
+	border-radius:5px;
+	background-color: #38b8fd;
+}
+.ulhide {
+	display: none;
+	list-style: none;
+	padding: 0;
+	margin: 0;
+	position: absolute;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	z-index: 100;
+	width: 100%;
+	height: 100%;
+}
+.ulhide>li:nth-of-type(1) {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	width: 100%;
+	position: absolute;
+	z-index: 2;
+	text-align: center;
+	bottom: 0px;
+	left: 0;
+	right: 0;
+	background: #fff;
+	height: 212px;
+}
+.ulhide>li:nth-of-type(2) {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	z-index: 1;
+	opacity: 0.2;
+	background-color: #000;
+}
+.ulhide span {
+	margin-top: 20px;
+	font-size: 1.2em;
+	display: inline-block;
+	border: 1px solid #999;
+	border-radius: 5px;
+	width: 75%;
+	height: 50px;
+	margin-bottom: 10px;
+	line-height: 50px;
+}
+.this {
+	color: #FFFFFF;
+	background: green;
+}

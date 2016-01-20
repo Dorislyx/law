@@ -1,0 +1,90 @@
+
+@charset "utf-8";
+@import url("../public/public.css");
+.ask_detail>li{
+	width: 97%;
+	margin-left: 3%;
+	border-bottom: 1px solid #ccc;
+}
+.ask_detail>li>span{
+	font-size: 1.2em;
+	float: left;
+}
+/*.ask_detail>li:nth-child(2){
+	height: 52px;
+}*/
+
+.ask_detail>li>span:nth-child(1){
+	width: 23%;
+	line-height: 40px;
+	margin-right: ;
+	
+}
+.ask_detail>li>span:nth-child(2){
+	width: 77%;
+	padding-top: 10px;
+	line-height: 20px;
+	
+}
+.weixin_pay{
+	margin-top: 20px;
+	width: 97%;
+	margin-left: 3%;
+	border-bottom: 1px solid #ccc;
+}
+.weixin_pay>span{
+	font-size: 1.2em;
+	float: left;
+}
+.weixin_pay>i.this{
+	background-image: url(../../img/yuan.png);
+}
+.weixin_pay>i{
+	width: 15px;
+	height: 15px;
+	float: right;
+	background-image: url(../../img/yuango.png);
+	background-repeat: no-repeat;
+	background-size: 15px;
+	background-position: center;
+	margin: 12px;
+}
+.pay_btn{
+	margin: 80px auto 0;
+	width:60%;
+	height:45px;
+	line-height: 45px;
+	text-align: center;
+	font-size: 1.7em;
+	color:#fff;
+	border-radius:5px;
+	background-color: #38b8fd;
+}
+
+
+.bighide {
+		width: 100%;
+		position: absolute;
+		top: 0px;
+		left: 0px;
+		bottom: 0px;
+		z-index: 999;
+}
+.bighide>.blackhide{
+		width: 100%;
+		height: 100%;
+		background-color: black;
+		opacity: 0.5;
+}	
+.blackshow_two{
+		width: 70%;
+		height: 50px;
+		line-height: 50px;
+		text-align: center;
+		font-size: 2em;
+		left: 15%;
+		position: absolute;		
+		top: 50%;
+		background-color: white;
+}
+

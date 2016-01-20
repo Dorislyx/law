@@ -1,0 +1,64 @@
+
+@charset "utf-8";
+@import url("../public/public.css");
+.flzxtext{
+	max-width:96%;
+	margin: 5px auto;
+}
+.right>a{
+	display: block;
+	width:100%;
+	height:100%;
+	background-image: url(../../img/phone.png);
+	background-size: 40%;
+	background-position: center;
+	background-repeat: no-repeat;
+}
+.project_lst{
+	margin-bottom: 50px;
+}
+.project_lst>li{
+	width: 98%;
+	height: 90px;
+	margin-left: 2%;
+	border-bottom: 1px solid #e3e3e3;
+}
+.project_lst>li>div{
+	float: left;
+}
+.project_lst>li>div:nth-child(1)>img{
+	width: 100%;
+	height: 100%;
+}
+.project_lst>li>div:nth-child(1){
+	width: 25%;
+	height: 80px;
+	margin-top: 5px;
+	margin-right: 5px;	
+}
+.project_lst>li>.info{
+	width: 48%;
+	height: 100px;
+}
+
+.project_lst>li>div:nth-child(3){	
+	background-color: #38b8fd;
+	line-height: 30px;
+	color: #fff;
+	padding: 0 5px;
+	margin: 30px 5px;
+	font-size: 1.2em;
+	border-radius: 8px;	
+}
+
+.project_lst>li>.info>p:nth-child(1){
+	font-size: 1.2em;
+	padding-top: 10px;
+	font-weight: 600;	
+}
+.project_lst>li>.info>p:nth-child(2){
+	font-size: 1.1em;
+	height: 48px;
+	padding-top: 5px;
+	text-overflow: clip;
+}

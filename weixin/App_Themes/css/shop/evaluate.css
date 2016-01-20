@@ -1,0 +1,74 @@
+
+@charset "utf-8";
+@import url("../public/public.css");
+section{
+	background-color: #f1f2ed;
+}
+.grade li.cur{
+	background-color: #ff494b;
+	border-color: #ff494b;
+	color: #fff;
+}
+.grade li{
+	float: left;
+	width: 18%;
+	text-align: center;
+	line-height: 27px;
+	border-radius: 5px;
+	border: 1px solid #CCCCCC;
+	margin-left: 11%;
+	margin-top: 30px;
+	font-size: 1.2em;
+}
+.xing{
+	height: 20px;
+	margin-top: 30px;
+	margin-left: 15px;
+}
+.xing>span{
+	float: left;
+	font-size: 1.2em;
+	line-height: 20px;
+	margin-right: 10px;
+}
+.xing>i.this{
+	background-image:url(../../img/xing.png) ;
+}
+.xing>i{
+	width: 18px;
+	height: 18px;
+	margin-left: 3px;
+	float: left;
+	background-image:url(../../img/xing2.png) ;
+	background-size: 18px;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+.explain>span{
+	float: left;
+	margin-top: 30px;
+	margin-left: 15px;
+	font-size: 1.2em;
+	line-height: 20px;
+}
+.explain>textarea{
+	width: 87%;
+	height: 150px;
+	margin-left: 15px;
+	margin-top: 5px;
+	padding: 5px;
+	border: 1px solid #CCCCCC;
+	resize: none;
+}
+
+.submit{
+	margin: 50px auto;
+	width:60%;
+	height:45px;
+	line-height: 45px;
+	text-align: center;
+	font-size: 1.7em;
+	color:#fff;
+	border-radius:5px;
+	background-color: #38b8fd;
+}

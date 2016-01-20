@@ -1,0 +1,177 @@
+@charset "utf-8";
+@import url("../public/public.css");
+article{
+height:100%;
+}
+.top{
+	width: 100%;
+	height: 130px;
+	background-image: url(../../img/person.png);
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+	background-position: center;
+	color:#fff;	
+}
+.person_info{
+	width: 60%;
+	height:40px;
+	margin: 50px auto 10px auto;
+	text-align: center;
+}
+.person_info>span{
+	vertical-align: top;
+	display: inline-block;
+	height:40px;
+	line-height: 40px;
+	font-size: 1.3em;
+	color: #FFFFFF;	
+}
+
+.person_info>span:nth-child(2){
+	width:16px;
+	margin-left: 10px;
+	background-image: url(../../img/sex_girl.png);
+	background-size:100%;
+	background-repeat: no-repeat;
+	background-position-x: center;
+	background-position-y: center;	
+}
+.person_info>span:nth-child(3){
+	margin-left: 10px;
+}
+.tel{
+	text-align: center;
+	color: #fff;
+	font-size: 1.3em;
+}
+.info_lst{
+	margin-top: 10px;
+	border-top: 1px solid #f0f0f0;
+	border-bottom: 1px solid #f0f0f0;
+}
+
+.info_lst>li{
+	width: 97%;
+	height: 45px;
+	margin-left: 3%;
+	border-bottom: 1px solid #f0f0f0;
+}
+.info_lst>li.ask{
+	border-bottom: none;
+}
+.info_lst>li.update{
+	border-bottom: none;
+}
+.info_lst>li.about{
+	border-bottom: none;
+}
+.info_lst>li>i{
+	width: 30px;
+	height: 100%;	
+	background-size:16px;
+	background-repeat: no-repeat;
+	background-position: center;
+	float: left;
+}
+.info_lst>li.modi_info>i{
+	background-image: url(../../img/per.png);
+}
+.info_lst>li.gold>i{
+	background-image: url(../../img/p2.png);
+}
+.info_lst>li.case>i{
+	background-image: url(../../img/p3.png);
+}
+.info_lst>li.ask>i{
+	background-size:20px;
+	background-image: url(../../img/p4.png);
+}
+.info_lst>li.set>i{
+	background-size:20px;
+	background-image: url(../../img/p5.png);
+}
+.info_lst>li.update>i{
+	background-size:18px;
+	background-image: url(../../img/p6.png);
+}
+.info_lst>li.about>i{
+	background-image: url(../../img/p7.png);
+}
+.info_lst>li>span{
+	line-height: 45px;
+	font-size: 1.3em;
+	padding-left: 5px;
+	font-family: 黑体;	
+}
+.info_lst>li>a{
+	width: 30px;
+	height: 100%;
+	background-image: url(../../img/person_more.png);
+	background-size:9px;
+	background-repeat: no-repeat;
+	background-position: center;
+	float: right;	
+}
+
+.exit_btn{
+	width: 80%;
+	height: 45px;
+	background-color: #0192e1;
+	margin: 30px auto;
+	color: #FFFFFF;
+	font-size: 1.3em;
+	text-align: center;
+	line-height: 45px;
+	border-radius: 10px;
+}
+
+.bighide {
+		width: 100%;
+		position: absolute;
+		top: 0px;
+		left: 0px;
+		bottom: 0px;
+		z-index: 999;
+}
+.bighide>.blackhide{
+		width: 100%;
+		height: 100%;
+		background-color: black;
+		opacity: 0.5;
+}	
+.blackshow_two{
+		width: 80%;
+		height: 150px;
+		left: 10%;
+		position: absolute;
+		bottom: 200px;
+		background-color: white;
+}
+.blackshow_two>div{
+	text-align: center;
+	font-family: 黑体;
+	
+}
+.blackshow_two>div:nth-child(1){
+	border-bottom: 1px solid #CCCCCC;
+	height: 30px;
+	line-height: 30px;
+	font-size: 1.3em;
+}
+.blackshow_two>div:nth-child(2){
+	height: 30px;
+	line-height: 30px;
+	font-size: 1.4em;
+	height: 80px;
+	line-height: 78px;
+}
+.blackshow_two>div:nth-child(3){
+	height: 40px;
+	line-height: 40px;
+	font-size: 1.4em;
+	color: #FFFFFF;
+	background-color: #0192e1;
+}
+
+
+

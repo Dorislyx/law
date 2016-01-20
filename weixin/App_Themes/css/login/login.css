@@ -1,0 +1,66 @@
+@charset "utf-8";
+@import url("../public/public.css");
+
+.right{
+	margin-right: 5px;
+}
+.login_img{
+	width: 100%;
+	height: 180px;
+	background-image: url(../../img/ggwq.png);
+	background-size: 180px;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+.login{
+	width:80%;
+	margin: 0 auto;
+	height:30px;
+	line-height: 30px;
+	margin-bottom: 20px;
+}
+.login>span{
+	float:left;
+}
+.login>span:nth-child(1){
+	width:20%;
+	text-align: center;
+	font-size: 1.3em;
+	color:#090909;
+}
+.login>span:nth-child(2){
+	width:80%;
+	height:29px;	
+	line-height: 29px;
+	border-bottom: 1px solid #bfbfbf;
+}
+.login>span:nth-child(2)>input{
+	display: inline-block;
+	width:100%;
+	height:100%;
+	padding-left: 5px;
+	font-size: 1.3em;
+}
+.login-btn{
+	margin: 50px auto 0 auto;
+	width:60%;
+	height:50px;
+	line-height: 50px;
+	text-align: center;
+	font-size: 1.7em;
+	color:#fff;
+	border-radius:5px;
+	background-color: #0192e1;
+}
+.find-back{
+	margin: 15px auto 30px auto;
+	width:60%;
+}
+.find-back>span:nth-child(1){
+	float:left;	
+	font-size: 1.1em;
+}
+.find-back>span:nth-child(2){
+	float:right;
+	font-size: 1.1em;	
+}

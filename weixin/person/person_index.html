@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<meta name="format-detection" content="telephone=no" />
+		<meta name="trimview" content="1.0.0">
+		<meta charset="utf-8" />
+		<title>个人中心</title>
+		<link rel="stylesheet" type="text/css" href="../App_Themes/css/person/person_index.css" />
+	</head>
+
+	<body>
+		<section>		
+			<article class="article art-top0 art-btm50 auto" id="iScrollperson_index">
+				<div>
+					<div class="top">
+						<div class="person_info">
+							<span id="username"></span>
+							<span id="sexicon"></span>
+							<span id="userage"></span>
+						</div>
+						<div class="tel" id="userphone"></div>
+					</div>
+				<ul class="info_lst">
+					<li class="modi_info" onclick="window.location.href='person_info.html'"><i></i><span>修改个人信息</span><a></a></li>
+					<li class="gold" onclick="window.location.href='mygold.html'"><i></i><span>我的金币</span><a></a></li>
+					<li class="case" name="0"><i></i><span>维权服务</span><a></a></li>
+					<li class="ask" name="1"><i></i><span>法律咨询</span><a></a></li>
+				</ul>
+				<!--<ul class="info_lst">
+					<li class="set" onclick="window.location.href='seting.html'"><i></i><span>我的设置</span><a></a></li>
+					<li class="update"><i></i><span>检查更新</span><a></a></li>
+				</ul>-->
+				<ul class="info_lst">
+					<li class="about" onclick="window.location.href='../shop/about_us.html'"><i></i><span>关于</span><a></a></li>
+				</ul>
+				<div class="exit_btn">退出</div>
+				</div>
+			</article>
+		</section>
+		<ul class="bighide" style="display: none;" >
+			<li class="blackhide"></li>
+			<li class="blackshow_two">
+				<div>提示</div>
+				<div>您当前已是最新版本</div>
+				<div>确认</div>				
+			</li>		
+		</ul>
+		
+		<script src="../App_Themes/js/public/jquery183.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../App_Themes/js/public/json.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../App_Themes/js/public/jweixin-1.0.0.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../App_Themes/js/public/getAjax.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../App_Themes/js/public/iscroll.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../App_Themes/js/person/person_index.js" type="text/javascript" charset="utf-8"></script>		
+	</body>
+</html>

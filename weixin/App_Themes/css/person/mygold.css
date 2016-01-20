@@ -1,0 +1,51 @@
+
+@charset "utf-8";
+@import url("../public/public.css");
+.curent{
+	margin-top: 50px;
+}
+.curent>span{
+	width: 100%;
+	float: left;
+	text-align: center;
+}
+.curent>span:nth-child(1){
+	font-size: 1.3em;
+	margin-top: 30px;
+	font-weight: bold;
+}
+.curent>span:nth-child(2){
+	font-size: 4em;
+	font-weight: 500;
+	margin-top: 10px;
+}
+.tab>li.this{
+	color: #49bdfe;
+	border-bottom: 1px solid #49bdfe;
+}
+.tab>li{
+	width: 50%;
+	float: left;
+	height: 35px;
+	line-height: 35px;
+	text-align: center;
+	font-size: 1.3em;
+	font-family: 黑体;
+	border-top: 1px solid #d5d4d4;
+	border-bottom: 1px solid #d5d4d4;
+}
+.tab>li:nth-child(1){
+	background-image: url(../../img/goldline.png);
+	background-repeat: no-repeat;
+	background-size:1px 25px;
+	background-position: right center;
+}
+article>div>div{
+	width: 85%;
+	margin: 20px auto;
+}
+article>div>div>p{
+	font-size: 1.2em;
+	line-height: 25px;
+	
+}

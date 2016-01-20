@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<meta name="trimview" content="1.0.0">
+		<meta charset="utf-8" />
+		<title>订单详情</title>
+		<link rel="stylesheet" type="text/css" href="../App_Themes/css/serve/wq_orderdetail.css" />
+	</head>
+
+	<body>
+		<section>
+			<header>
+				<span class="left back" name="back"></span>
+				<span class="center">订单详情</span>
+				<span class="right"></span>
+			</header>			
+			<article class="article art-top50 art-btm0 auto" id="iScrollwq_orderdetail">
+				<div>
+					<ul class="ask_detail">
+					<!--<li><span>订单号：</span><span id="ordernum">100000000000023</span></li>-->
+					<!--<li><span>联系方式</span><span id="zxtel">18046565632</span></li>-->
+					<li><span>咨询分类</span><span id="zxclassify"></span></li>
+					<li><span>咨询内容</span><span id="zxcon"></span></li>
+					<li><span>咨询费用</span><span id="zx_money"></span></li>
+				</ul>
+				<div id="pay_box" style="display: block;">
+					<div class="weixin_pay"><span>微信支付</span><i></i></div>
+					<div class="pay_btn">确认支付</div>
+				</div>
+				</div>
+			</article>
+		</section>
+		
+		<script src="../App_Themes/js/public/jquery183.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../App_Themes/js/public/getAjax.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../App_Themes/js/public/json.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../App_Themes/js/public/jweixin-1.0.0.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../App_Themes/js/public/iscroll.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../App_Themes/js/serve/wq_orderdetail.js" type="text/javascript" charset="utf-8"></script>		
+	</body>
+</html>
